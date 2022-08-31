@@ -15,18 +15,18 @@ btns.forEach(function (btn) {
         const styles = e.currentTarget.classList;
         //logic for decrease, increase and reset buttons
         if (styles.contains("decrease")){
-            count--;
+            count -= 10;
         } else if (styles.contains("increase")){
-            count++;
+            count += 10;
         } else if (styles.contains("reset")){
             count = 0;
         }
         //changing color based on count value
         if (count > 0){
-            value.style.color = "SeaGreen";
+            value.style.color = "DarkSeaGreen";
         }
         if (count < 0){
-            value.style.color = "Maroon";
+            value.style.color = "GoldenRod";
         }
         if (count == 0){
             value.style.color = "black";
@@ -34,4 +34,3 @@ btns.forEach(function (btn) {
         value.textContent = count;
     })
 });
-    
